@@ -1,7 +1,7 @@
 <template>
   <div>
     <form @submit.prevent="saveOrderOnSubmit" class="row order-form">
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-xl-6">
         <div class="row mb-2">
           <span class="col-3 title">Order Number:</span>
           <span class="col-9">{{ "#" + orderNumber }}</span>
@@ -12,11 +12,11 @@
         </div>
         <div class="form-group">
           <label class="form-label title">Name</label>
-          <input type="text" class="form-control" v-model="name" />
+          <input type="text" class="form-control" required v-model="name" />
         </div>
         <div class="form-group">
           <label class="form-label title">Contact</label>
-          <input type="text" class="form-control" v-model="contact" />
+          <input type="text" class="form-control" required v-model="contact" />
         </div>
         <h3>Trans Type</h3>
         <div
@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-xl-6">
         <div class="del ivery-details rounded mb-4">
           <div class="title mb-4">Delivery Details</div>
           <div class="row justify-content-between order-title">
@@ -172,6 +172,21 @@ export default {
         orderItems: this.selectedOrderItems,
         status: 1
       };
+
+//#TODO Çok yoruldum, basitçe kontrol koyup bırakıyorum
+if(!newOrder.name){
+  alert("Name field is required")
+  return;
+}
+if(!newOrder.contact){
+  alert("Contact field is required")
+  return;
+}
+if(newOrder.orderItems.filter(x=>x.quantity < 1).length > 0){
+  alert("Order items must be greater than zero")
+  return;
+}
+
       this.$store
         .dispatch("addOrder", newOrder)
         .then((response) => {

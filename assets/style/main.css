@@ -13,11 +13,11 @@
   --soft-gray: #ebebeb;
   --soft-gray-border: #e0e0e0;
   --dark-gray: #737376;
-  --gray: #AAAAAA;
-  --dark-yellow: #BAA500;
-  --green: #0DC74E;
-  --light-card-color: #F6F6F6;
-  --orange: #FC7501;
+  --gray: #aaaaaa;
+  --dark-yellow: #baa500;
+  --green: #0dc74e;
+  --light-card-color: #f6f6f6;
+  --orange: #fc7501;
   --primary-font-family: "SF Pro Display", system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -110,6 +110,14 @@ body {
   color: var(--primary-black);
   font-weight: 500;
 }
+.vertical-menu a,
+.vertical-menu a:hover,
+.vertical-menu a:visited,
+.vertical-menu a:focus,
+.vertical-menu a:active {
+  text-decoration: none;
+  color: var(--primary-black);
+}
 .vertical-menu ul > li > a.active {
   color: var(--blue);
 }
@@ -151,18 +159,17 @@ body {
 .order-item > .order-header .title + span {
   font-weight: var(--fw-500);
 }
-.order-item > .order-header .badge{
+.order-item > .order-header .badge {
   font-weight: var(--fw-400) !important;
   font-size: var(--fs-secondary);
 }
-.order-item > .order-header .badge.bg-primary{
+.order-item > .order-header .badge.bg-primary {
   background-color: var(--blue);
 }
-.order-item > .order-header .badge.bg-dark-yellow{
+.order-item > .order-header .badge.bg-dark-yellow {
   background-color: var(--dark-yellow);
   letter-spacing: 2px;
 }
 .order-item > .order-footer .note {
   font-weight: var(--fw-600);
 }
-

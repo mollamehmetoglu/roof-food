@@ -4,7 +4,7 @@
       <nuxt-link tag="a" to="/" class="btn btn-secondary btn-lg border-0">
         <span class="d-flex align-items-center">
           <img src="~/static/hamburger-menu.svg" class="me-3" width="15px" />
-          Showing 10+ Orders
+          Showing {{fetchedOrders.length > 10 ? "10+" : fetchedOrders.length }} Orders
         </span>
       </nuxt-link>
       <nuxt-link
@@ -43,10 +43,9 @@ export default {
         var statusId = this.orderStatuses.find(
           (x) => x.seo === this.$route.params.status
         ).id;
-        console.log(statusId);
         return this.$store.getters.getOrders.filter(
           (x) => x.status === statusId
-        );
+        )
       }
       return this.$store.getters.getOrders;
     },

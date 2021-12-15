@@ -19,6 +19,11 @@ export default {
         href: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
       },
     ],
+    // script: [
+    //   {
+    //     src: "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js",
+    //   },
+    // ],
   },
 
   /*
@@ -30,7 +35,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/style/main.css", "~/assets/style/vue-multiselect.min.css"],
+  css: ["~/assets/style/main.css", "~/assets/style/vue-multiselect.min.css", "~/assets/style/vue-multiselect.min.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],

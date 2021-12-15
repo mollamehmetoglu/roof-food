@@ -1,6 +1,8 @@
 <template>
   <div class="vertical-menu">
-    <h2 class="mb-3">Orders</h2>
+    <h2 class="mb-3">
+      <nuxt-link to="/" tag="a">Orders</nuxt-link>
+    </h2>
     <ul>
       <li>
         <nuxt-link to="/order/create" tag="a" active-class="active">

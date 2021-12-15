@@ -152,7 +152,7 @@ const createStore = () => {
     },
     getters: {
       getOrders(state) {
-        return state.fetchedOrders;
+        return state.fetchedOrders.reverse();
       },
       getStaticValues(state) {
         return state.staticValues;
