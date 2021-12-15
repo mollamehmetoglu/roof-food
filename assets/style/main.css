@@ -1,0 +1,168 @@
+:root {
+  --sidebar-width: 85px;
+  --fs-header: 30px;
+  --fs-primary: 18px;
+  --fs-secondary: 17px;
+  --fs-total: 24px;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --primary-black: #171719;
+  --blue: #2a71fa;
+  --light-gray: #b4b4b5;
+  --soft-gray: #ebebeb;
+  --soft-gray-border: #e0e0e0;
+  --dark-gray: #737376;
+  --gray: #AAAAAA;
+  --dark-yellow: #BAA500;
+  --green: #0DC74E;
+  --light-card-color: #F6F6F6;
+  --orange: #FC7501;
+  --primary-font-family: "SF Pro Display", system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--fs-primary);
+  color: var(--primary-black);
+}
+.sidebar {
+  width: var(--sidebar-width);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  background: #ededed;
+  overflow-y: auto;
+}
+.sidebar ul,
+.vertical-menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+.sidebar ul li,
+.sidebar ul li > a {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar ul li > a {
+  width: 100%;
+}
+.sidebar ul li > img {
+  width: 30px;
+}
+.sidebar ul li.logo {
+  height: 60px;
+  margin: 15px 12px;
+}
+.sidebar ul > li a.active {
+  background: #f6f6f6;
+}
+.sidebar::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.vertical-menu {
+  margin-left: var(--sidebar-width);
+  padding: 29px;
+  width: 310px;
+  background: #f6f6f6;
+  border: 1px solid #cccccc;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+}
+.vertical-menu h2,
+.main-container h1 {
+  font-size: var(--fs-header);
+  font-weight: 500;
+}
+.vertical-menu ul > li > a {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  font-size: var(--fs-primary);
+  color: var(--primary-black);
+  font-weight: 500;
+}
+.vertical-menu ul > li > a.active {
+  color: var(--blue);
+}
+.vertical-menu ul > li > a span:last-of-type {
+  color: var(--light-gray);
+}
+.main-container {
+  margin-left: 395px;
+  padding: 35px 41px 35px 38px;
+  overflow-y: auto;
+  height: 100%;
+  position: absolute;
+  width: calc(100% - 395px);
+}
+.header {
+  margin-bottom: 32px;
+}
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus {
+  color: var(--primary-black);
+  background-color: var(--soft-gray);
+  border-color: var(--soft-gray-border);
+  font-weight: 500;
+}
+.btn-secondary.btn-lg {
+  font-size: var(--fs-primary);
+  padding: 12px 20px;
+}
+.lh-1 {
+  line-height: 1rem;
+}
+.order-item > .order-header .title {
+  font-size: var(--fs-secondary);
+  color: var(--dark-gray);
+  font-weight: var(--fw-400);
+}
+.order-item > .order-header .title + span {
+  font-weight: var(--fw-500);
+}
+.order-item > .order-header .badge{
+  font-weight: var(--fw-400) !important;
+  font-size: var(--fs-secondary);
+}
+.order-item > .order-header .badge.bg-primary{
+  background-color: var(--blue);
+}
+.order-item > .order-header .badge.bg-dark-yellow{
+  background-color: var(--dark-yellow);
+  letter-spacing: 2px;
+}
+.order-item > .order-footer .note {
+  font-weight: var(--fw-600);
+}
+
